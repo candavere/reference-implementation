@@ -30,6 +30,10 @@ are made and how maintainers are added is in [GOVERNANCE.md](GOVERNANCE.md); que
 
 ## Use
 
+From a fresh clone, `dotnet build Cai.Reference.slnx && dotnet test Cai.Reference.slnx` takes about **15 seconds**: 12 s
+to build with an empty NuGet cache and 3 s for the 107 tests (measured 2026-10-16 on a desktop Linux machine, .NET 10).
+Scanning this repository with itself takes 17 s.
+
 ```bash
 dotnet build src/Cai.Reference -c Release
 alias cai-ref='dotnet src/Cai.Reference/bin/Release/net10.0/Cai.Reference.dll'
